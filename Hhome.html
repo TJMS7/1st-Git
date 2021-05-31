@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="HMstyle.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+    <title>MayurLeather</title>
+</head>
+<body>
+    <!-- TOPUP BUTTON STARTS HERE-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <span class="fas fa-arrow-circle-up"></span>
+        <script src="HMjavascript.js"></script>
+    </button>
+    <!-- TOPUP BUTTON ENDS HERE-->
+
+    <!-- NAVBAR STARTS HERE-->
+    <nav>
+        <div class="logo"><a href="/Hhome.html"><img src="logo.jpeg"></a></div>
+        <label for="drop" class="toggle">MENU<i class="fa fa-bars" aria-hidden="true"></i></label>
+        <input type="checkbox" id="drop">
+        <ul>
+            <li><a href="/Hhome.html"><span class="fas fa-home"></span></a></li>
+            <li>
+                <label for="btn-1" class="show">पाठ्यक्रम
+                    <span class="fas fa-caret-right"></span> 
+                </label>
+                <a href="#">पाठ्यक्रम
+                    <span class="fas fa-caret-down"></span>
+                </a>
+                <input type="checkbox" id="btn-1">
+                <ul>
+                    <li><a href="#">कक्षा 1-3</a></li>
+                    <li><a href="#">कक्षा 4-8</a></li>
+                    <li><a href="#">कक्षा 9-12</a></li>
+                    <li>
+                        <label for="btn-3" class="show">पुस्तकें&nbsp;पढ़े
+                            <span class="fas fa-caret-right"></span>
+                        </label>
+                        <a href="#">पुस्तकें&nbsp;पढ़े
+                            <span class="fas fa-caret-right"></span>
+                        </a>
+                        <input type="checkbox" id="btn-3">
+                        <ul>
+                            <li><a href="#">श्रीमद्भगवद्गीता</a></li>
+                            <li><a href="#">महाभारत</a></li>
+                            <li><a href="#">रामायण</a></li>
+                            <li>
+                                <a href="#">और&nbsp;पढ़ें
+                                <span class="fa fa-plus"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <label for="btn-2" class="show">प्रश्नोत्तरी 
+                    <span class="fas fa-caret-right"></span>
+                </label>
+                <a href="#">प्रश्नोत्तरी
+                    <span class="fas fa-caret-down"></span>
+                </a>
+                <input type="checkbox" id="btn-2">
+                <ul>
+                    <li><a href="#">स्तर 1</a></li>
+                    <li><a href="#">स्तर 2</a></li>
+                    <li><a href="#">स्तर 3</a></li>
+                    <li>
+                        <a href="#">उच्च&nbsp;स्तर&nbsp;के&nbsp;लिए
+                        <span class="fa fa-plus"></span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <label for="btn-4" class="show">खाता
+                    <span class="fas fa-caret-right"></span> 
+                </label>
+                <a href="#">खाता
+                    <span class="fas fa-caret-down"></span>
+                </a>
+                <input type="checkbox" id="btn-4">
+                <ul>
+                    <li>
+                        <a href="#">नियंत्रण-पट्ट
+                        <span class='fas fa-poll-h'></span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">बटुआ
+                        <span class="fas fa-wallet"></span>
+                        </a>
+                    </li>
+                    <li>
+                      <a href="Hlogin.html">प्रस्थान&nbsp;करें
+                      <span class="fas fa-sign-out-alt"></span>
+                      </a>
+                  </li>
+                </ul>
+            </li>
+            <li><a href="/Ehome.html">English</a></li>
+        </ul>
+    </nav>  
+    <!-- NAVBAR ENDS HERE -->
+
+    <!-- FLEX BOX 70-30-->
+    <div class="box-area">
+        <div class="single-box">
+                <div class="slideshow-container">
+
+                  <div class="mySlides fade">
+                    <div class="numbertext">1 / 8</div>
+                    <img src="img1.jpg" style="width:100%">
+                  </div>
+                  
+                  <div class="mySlides fade">
+                    <div class="numbertext">2 / 8</div>
+                    <img src="img2.jpeg" style="width:100%">
+                  </div>
+                  
+                  <div class="mySlides fade">
+                    <div class="numbertext">3 / 8</div>
+                    <img src="img3.jpeg" style="width:100%">
+                  </div>
+
+                  <div class="mySlides fade">
+                    <div class="numbertext">4 / 8</div>
+                    <img src="img4.jpeg" style="width:100%">
+                  </div>
+
+                  <div class="mySlides fade">
+                    <div class="numbertext">5 / 8</div>
+                    <img src="img5.jpeg" style="width:100%">
+                  </div>
+
+                  <div class="mySlides fade">
+                    <div class="numbertext">6 / 8</div>
+                    <img src="img6.jpeg" style="width:100%">
+                  </div>
+
+                  <div class="mySlides fade">
+                    <div class="numbertext">7 / 8</div>
+                    <img src="img7.jpeg" style="width:100%">
+                  </div>
+
+                  <div class="mySlides fade">
+                    <div class="numbertext">8 / 8</div>
+                    <img src="img8.jpeg" style="width:100%">
+                  </div>
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+              </div>
+              <script src="HMjavascript.js"></script>
+        </div>
+        <div class="single-box">
+                <span class="header-text"><strong>अधिसूचना</strong></span>
+                <div class="news">
+                <ul>
+                  <li><a href="#"><p> श्रीमद्भगवद्गीता पढ़ने के लिए उपलब्ध</p></a></li>
+                  <li><a href="#"><p> अपना परीक्षण करें नई प्रश्नोत्तरी खेले</p></a></li>
+                  <li><a href="#"><p> श्रीमद्भगवद्गीता पढ़ने के लिए उपलब्ध</p></a></li>
+                  <li><a href="#"><p> अपना परीक्षण करें नई प्रश्नोत्तरी खेले</p></a></li>
+                  <li><a href="#"><p> श्रीमद्भगवद्गीता पढ़ने के लिए उपलब्ध</p></a></li>
+                  <li><a href="#"><p> अपना परीक्षण करें नई प्रश्नोत्तरी खेले</p></a></li>                      
+                  <li><a href="#"><p> श्रीमद्भगवद्गीता पढ़ने के लिए उपलब्ध</p></a></li>
+                  <li><a href="#"><p> अपना परीक्षण करें नई प्रश्नोत्तरी खेले</p></a></li>
+                  <li><a href="#"><p> श्रीमद्भगवद्गीता पढ़ने के लिए उपलब्ध</p></a></li>
+                  <li><a href="#"><p> अपना परीक्षण करें नई प्रश्नोत्तरी खेले</p></a></li>
+                  <li><a href="#"><p> श्रीमद्भगवद्गीता पढ़ने के लिए उपलब्ध</p></a></li>
+                  <li><a href="#"><p> अपना परीक्षण करें नई प्रश्नोत्तरी खेले</p></a></li>
+                  <li><a href="#"><p> श्रीमद्भगवद्गीता पढ़ने के लिए उपलब्ध</p></a></li>
+                  <li><a href="#"><p> अपना परीक्षण करें नई प्रश्नोत्तरी खेले</p></a></li>
+                  <li><a href="#"><p> श्रीमद्भगवद्गीता पढ़ने के लिए उपलब्ध</p></a></li>
+                  <li><a href="#"><p> अपना परीक्षण करें नई प्रश्नोत्तरी खेले</p></a></li>
+                  <li><a href="#"><p> श्रीमद्भगवद्गीता पढ़ने के लिए उपलब्ध</p></a></li>
+                  <li><a href="#"><p> अपना परीक्षण करें नई प्रश्नोत्तरी खेले</p></a></li>
+                  <li><a href="#"><p> श्रीमद्भगवद्गीता पढ़ने के लिए उपलब्ध</p></a></li>
+                  <li><a href="#"><p> अपना परीक्षण करें नई प्रश्नोत्तरी खेले</p></a></li>
+                </ul>
+                </div>
+        </div>
+    </div>
+    <!-- TOP THREE BOX IN ROW ENDS HERE-->
+
+    <!-- SLICK SLIDER SECTION STARTS HERE -->
+          <!-- BOOKS SECTION -->
+	    <header>
+        <h1>पुस्तकें</h1>
+      </header>
+      <section class="slider">
+
+      
+        <div>
+          <img src="book1.jpeg">
+          <div class="desc">
+            <h3>श्रीमद्भगवद्गीता</h3>
+            <a href="#" class="btn">अभी पढ़ें</a>
+          </div>
+        </div>
+
+        <div>
+            <img src="book2.jpeg">
+            <div class="desc">
+              <h3>महाभारत</h3>
+              <a href="#" class="btn">अभी पढ़ें</a>
+            </div>
+          </div>
+      
+        <div>
+          <img src="book3.jpeg">
+          <div class="desc">
+            <h3>रामायण</h3>
+            <a href="#" class="btn">अभी पढ़ें</a>
+          </div>
+        </div>
+      
+        <div>
+          <img src="book4.jpeg">
+          <div class="desc">
+            <h3>ऋग्वेद</h3>
+            <a href="#" class="btn">अभी पढ़ें</a>
+          </div>
+        </div>
+      
+        <div>
+          <img src="book5.jpeg">
+          <div class="desc">
+            <h3>सामवेद</h3>
+            <a href="#" class="btn">अभी पढ़ें</a>
+          </div>
+        </div>
+
+        <div>
+          <img src="book6.jpeg">
+          <div class="desc">
+            <h3>यजुर्वेद</h3>
+            <a href="#" class="btn">अभी पढ़ें</a>
+          </div>
+        </div>
+
+        <div>
+          <img src="book7.jpeg">
+          <div class="desc">
+            <h3>अथर्ववेद</h3>
+            <a href="#" class="btn">अभी पढ़ें</a>
+          </div>
+        </div>
+
+        <div>
+          <img src="book8.jpeg">
+          <div class="desc">
+            <h3>गीतांजलि</h3>
+            <a href="#" class="btn">अभी पढ़ें</a>
+          </div>
+        </div> 
+    </section>  
+      <br>
+          <!-- BACK TO ROOTS -->
+      <header>
+        <h1>प्राचीन इतिहास की ओर</h1>
+      </header>  
+      <section class="responsive">
+        <div>
+          <div class="box1">
+            <p>सनातन संस्कृति का उदय एवं इसकी प्राचीनता</p>
+                <li>प्रमाणित साक्ष्य और अन्य धर्म के साथ तुलना मौजूद है।</li>
+                <li>विश्व साहित्य में उपलब्ध साक्ष्य</li>
+            <a href="#" class="btnb">Read&nbsp;Now</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="box1">
+            <p>सनातन संस्कृति का भौगोलिक विस्तार</p>
+              <li>साबित सबूत</li>
+              <li>अन्य आस-पास के देशों (अंगरकोट, कैलाश पर्वत, नेपाल, आदि) में प्राचीन मंदिर।</li>
+            <a href="#" class="btnb">Read&nbsp;Now</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="box1">
+            <p>प्रमुख ग्रंथ,वेद,पुराण,उपनिषद, प्रमुख संत एवं उनकी कृतियां</p>
+              <li>राम, कृष्ण, महाभारत, गीता,चरक, चाणक्य, आर्यभट्ट आदि की प्रत्येक कहानी के बारे में मूल बातें।</li>
+              <li>क्रुक्स - "सर्वे भवन्तु सुखिन" और वसुधैव कुटुम्बकम, "विश्व गुरु" की उपाधि के पीछे का आधार</li>
+            <a href="#" class="btnb">Read&nbsp;Now</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="box1">
+            <p>सनातन संस्कृति की वैज्ञानिकता</p> 
+              <li>अंध विश्वास बनाम विज्ञान (प्रत्येक अनुष्ठान और प्रक्रिया का वैज्ञानिक प्रमाण)</li>
+              <li>हवन, पीपल पूजन, जीन्स आदि की सफाई, नदियों, गाय आदि का सम्मान।</li>
+            <a href="#" class="btnb">Read&nbsp;Now</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="box1">
+            <p>प्रमुख भारतीय राजवंश एवं चक्रवर्ती राजा </p>
+              <li>भरत, रघुवंश शासन गुप्त, मौर्य, शुंग, कण्व आदि</li>
+              <li>भरत, राम, यिधिष्ठिर, पोरस, विक्रमादिया, समुद्रगुप्त, अशोक, चंद्रगुप्त</li>
+            <a href="#" class="btnb">Read&nbsp;Now</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="box1">
+            <p>भारत पर बाह्य आक्रमण</p>
+              <li>सिकंदर, मंगोल, तैमूर लुंग</li>
+            <a href="#" class="btnb">Read&nbsp;Now</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="box1">
+            <p>भारत पर मुस्लिम बाह्य आक्रमण एवं सांस्कृतिक संघर्ष</p>
+              <li>मुगलों का हमला, सामूहिक मंदिर विध्वंस, पृथ्वीराज चौहान, हम्मीर, शिवाजी, मा हरण कुंभ,
+                संगा, प्रताप, पेशवा बाजीरो, पेशवा सदाशिवराव, गुरु गोविंद सिंह, बांदा वैराग मैं और भी बहुत कुछ</li>
+              <li>मुगल शासन के खिलाफ उनके संघर्ष की कहानियां</li>
+            <a href="#" class="btnb">Read&nbsp;Now</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="box1">
+            <p>धर्म सुधार आंदोलन के प्रमुख संत, लुप्त  होती धर्म की चेतना को दोबारा जाग्रत करने वाले संत एवं उनकी कृतियां व कार्य।</p>
+              <li>आदि शंकराचार्य, तुलसीदास, कबे एर, रैदास, पीपा, राजा राममोहन राय, मुगल शासन के खिलाफ 
+                उनके संघर्ष की कहानियां कुछ जीवनी या संक्षिप्त परिचय स्वामी दयानंद सरस्वती, स्वामी विवेकानंद</li>
+              <li>कुछ जीवनी या संक्षिप्त परिचय</li>
+            <a href="#" class="btnb">Read&nbsp;Now</a>
+          </div>
+        </div>
+      
+    </section>  
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script> 
+    <script>
+      function createSlick(){
+        $(".slider").not('.slick-initialized').slick({
+        centerMode: true,
+        autoplay:false,
+        dots:true,
+        arrows:true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        responsive: [
+          {
+            breakpoint: 968,
+            settings: {
+                arrows: true,
+                centerMode: true,
+                dots:true,
+                infinite:true,
+                centerPadding: '40px',
+                slidesToShow: 3,
+                slidesToScroll:1,
+            }
+          },
+          {
+            breakpoint: 750,
+            settings: {
+              arrows: true,
+              dots:false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ],
+      });
+
+      $('.responsive').not('.slick-initialized').slick({
+        dots: true,
+        infinite: false,
+        arrows:true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1000,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+              dots: true,
+              arrows:true,
+            }
+          },
+          {
+            breakpoint: 660,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite:false,
+              dots:true,
+              arrows:true,
+            }
+          }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+} 
+    createSlick();
+    
+    //Will not throw error, even if called multiple times.
+    $(window).on( 'resize', createSlick );
+    
+    </script>
+    <!-- SLICK SLIDER SECTION ENDS HERE-->
+
+    <!-- FOOTER STARTS HERE -->
+        <footer>
+          <div class="main-content">
+            <div class="left box">
+              <h2>हमारे बारे में</h2>
+              <div class="content">
+                <p>आइए भारतीयों को उनके सांस्कृतिक इतिहास के बारे में बताए</p>
+                <div class="social">
+                  <a href="#"><span class="fab fa-facebook-f"></span></a>
+                  <a href="#"><span class="fab fa-twitter"></span></a>
+                  <a href="#"><span class="fab fa-instagram"></span></a>
+                  <a href="#"><span class="fab fa-youtube"></span></a>
+                </div>
+              </div>
+            </div>
+     
+            <div class="center box">
+              <h2>हमारा पता</h2>
+              <div class="content">
+                <div class="place">
+                  <span class="fas fa-map-marker-alt"></span>
+                  <span class="text">जयपुर,राजस्थान</span>
+                </div>
+                <div class="phone">
+                  <span class="fas fa-phone-alt"></span>
+                  <span class="text">+91-0000000000</span>
+                </div>
+                <div class="email">
+                  <span class="fas fa-envelope"></span>
+                  <span class="text">abc@example.com</span>
+                </div>
+              </div>
+            </div>
+     
+            <div class="right box">
+              <h2>Contact us</h2>
+              <div class="content">
+                <form action="#">
+                  <div class="email">
+                    <div class="text">Email *</div>
+                    <input type="email" required placeholder="Email">
+                  </div>
+                  <div class="msg">
+                    <div class="text">Message *</div>
+                    <textarea rows="2" cols="25" required placeholder="संदेश"></textarea>
+                  </div>
+                  <div class="btncu">
+                    <button type="submit">भेजे</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="bottom">
+            <center>
+              <span class="credit">Created By <a href="https://www.linkedin.com/in/tanmay-jain-a6288a15a/">Tanmay Jain</a> | </span>
+              <span class="far fa-copyright"></span><span> 2021 All rights reserved.</span>
+            </center>
+          </div>
+        </footer>
+   <!-- FOOTER ENDS HERE -->
+    
+</body>
+</html>

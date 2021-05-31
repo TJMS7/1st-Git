@@ -1,0 +1,1001 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+
+body{
+    background: whitesmoke;
+}
+
+/* SIDE TOPUP BUTTON STRT*/
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+#myBtn:hover {
+    background-color: #555;
+  }
+
+/*SIDE TOPUP BUTTON END*/
+
+ /*NAV BAR STARTS HERE*/
+
+nav{
+    background: black;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 5px #000000,
+                0 0 5px #000000;
+}
+
+.logo img{
+  position: absolute;
+  width: auto;
+  height: 70px;
+}
+
+nav:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.toggle, [id^=drop]{
+  display: none;
+}
+
+.toggle i{
+  float: right;
+  right: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+nav ul{ 
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+nav ul li{
+    float: left;
+    display: inline-block;
+    background: black;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: whitesmoke;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+
+nav ul li a:hover{
+    color: cyan;
+    border-radius: 5px;
+    box-shadow: 0 0 5px cyan,
+                0 0 5px cyan;
+}
+
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+
+nav ul ul{
+    position: absolute;
+    display: inherit;
+    top: 90px;
+    border-top: 3px solid cyan;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+   
+}
+
+nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 190px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+}
+
+nav ul ul li a{
+  line-height: 50px;
+}
+
+nav ul ul li a:hover{
+  background-color : black;
+  color: cyan;
+  box-shadow: none;
+}
+
+nav ul ul ul{
+  border-top: none;
+}
+
+nav ul ul ul li{
+    position: relative;
+    top: -70px;
+    width: 180px;
+    left: 150px;
+}
+
+.fa-plus{
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+.show, .icon, input{
+    display: none;
+}
+/* NAV BAR ENDS HERE*/
+
+/* FLEXBOX (BLOGPOST TYPE) STARTS HERE */
+
+.box-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.single-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 500px;
+    border-radius: 4px;
+    margin: 20px;
+    padding: 20px;
+    transition: .3s;
+  }
+
+.single-box .news ul ,
+.single-box .news ul li a{
+    margin-bottom: 15px;
+    display: block;
+  }
+
+.single-box:nth-child(1){
+   width: 70%;
+   align-items: center;
+  }
+
+ .single-box:nth-child(2){
+    width: 30%;
+    overflow: auto;
+    background-color: whitesmoke;
+  }
+
+.header-text{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 48px;
+    text-align: center;
+    text-decoration: underline;
+    box-sizing: border-box;
+  }
+
+ .header-text:hover{
+  border-radius: 5px;
+  box-shadow: 0 0 5px #000000,
+              0 0 5px #000000;
+  }
+
+ /* FLEXBOX (BLOGPOST TYPE) ENDS HERE */
+
+ /*IMAGE SLIDER STARTS HERE*/
+
+ .mySlides{
+    display: none;
+  }
+
+ img {
+    vertical-align: middle;
+    height: 450px;
+  }
+ 
+ .slideshow-container {
+    max-width: 1100px;
+    position: relative;
+    margin: auto;
+  }
+
+ .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+ 
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+ 
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+ 
+.active, .dot:hover {
+    background-color: #717171;
+  }
+ 
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+ 
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+ 
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+/*IMAGE SLIDER ENDS HERE*/
+
+/* BOOK READ AND BACK TO ROOT SECTION SLICK SLIDER STARTS HERE */
+
+h1{
+  padding-left: 30px;
+}
+
+.slider {
+  width: 90%;
+  height: auto;
+  margin: 15px auto;
+  background: #fff;
+  border-radius: 5px;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); 
+}
+
+.slick-slider button{ 
+  position: absolute;
+  top: 50%;
+  background: black;
+  border: none;
+  outline: none;
+  z-index:100;
+  width: 50px;
+  height: 50px; 
+  color: black;
+  cursor: pointer;
+  transform: translate(0%,-70%);
+  border-radius: 36px;
+  box-shadow: 0px 2px 20px rgba(0,0,0,0.07);
+}
+
+.slick-slider .slick-prev{
+  left:-30px;
+}
+
+.slick-slider .slick-prev::before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f104";
+  font-size:30px;
+  color: whitesmoke;
+  left: 8px;
+  position: relative;
+  z-index: 10;
+}
+
+.slick-slider .slick-next{
+  right:-30px;
+}
+
+.slick-slider .slick-next::after{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f105";
+  font-size:30px;
+  color: whitesmoke;
+  right: 15px;
+  position: relative;
+  z-index: 10;
+}
+
+.responsive {
+  width: 90%;
+  height: auto;
+  margin: 15px auto;
+  background: #fff;
+  border-radius: 5px;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); 
+}
+
+.slick-responsive button{ 
+  position: absolute;
+  top: 50%;
+  background: black;
+  border: none;
+  outline: none;
+  z-index:100;
+  width: 50px;
+  height: 50px; 
+  color: black;
+  cursor: pointer;
+  transform: translate(0%,-70%);
+  border-radius: 36px;
+  box-shadow: 0px 2px 20px rgba(0,0,0,0.07);
+}
+
+.slick-responsive .slick-prev{
+  left:-30px;
+}
+
+.slick-responsive .slick-prev::before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f104";
+  font-size:30px;
+  color: whitesmoke;
+  left: 8px;
+  position: relative;
+  z-index: 10;
+}
+
+.slick-responsive .slick-next{
+  right:-30px;
+}
+
+.slick-responsive .slick-next::after{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f105";
+  font-size:30px;
+  color: whitesmoke;
+  right: 15px;
+  position: relative;
+  z-index: 10;
+}
+
+.responsive .slick-active{
+  transform: scale(1);
+}
+
+.slick-slide {
+  color: #333;
+  padding: 20px 20px;
+  font-size: 1.25em;
+  font-family: "Verdana";
+  text-align: center;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.slick-slide .desc {
+  opacity: 1;
+}
+
+.slick-slide .desc>* {
+  transition: all 900ms ease;
+}
+
+.slick-slide .desc h3 {
+  position: relative;
+}
+
+.slick-slide .desc .p {
+  position: relative;
+  opacity: 1;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.slick-slide .desc li{
+  margin-top: 5px;
+  font-size: 15px;
+  margin-left: 0;
+}
+
+.slick-slide .box1 {
+  opacity: 1;
+  box-sizing: border-box;
+  border: 1px solid cyan;
+  height: 300px;
+}
+
+.slick-slide .box1>* {
+  transition: all 900ms ease;
+}
+
+.slick-slide .box1 h3 {
+  position: relative;
+}
+
+.slick-slide .box1 p {
+  position: relative;
+  opacity: 1;
+  font-weight: bold;
+  height: 100px;
+  margin-top: 0px;
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 2px solid cyan;
+  background-color: black;
+  color: whitesmoke;
+}
+
+.slick-slide .box1 li{
+  margin-top: 5px;
+  font-size: 15px;
+  margin-left: 0;
+  text-align: left;
+  margin-left: 5px;
+}
+
+.responsive .slick-active{
+  transform: scale(1);
+}
+
+.slick-slide img {
+  width: 100%;
+  height: 340px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.slick-dots {
+  text-align: center;
+}
+
+.slick-dots li {
+  display: inline-block;
+  padding: 1px;
+  background: #ccc;
+  margin: 10px 5px;
+  width: 40px;
+  height: 4px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.slick-dots li.slick-active {
+  background: cyan;
+}
+
+.slick-dots button {
+  display: none;
+}
+.slick-slide {
+  opacity: 1;
+  transition: all 300ms ease;
+}
+
+.slick-current {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.slick-current .desc {
+  opacity: 1;
+}
+
+.slick-current .desc h2 {
+  left: 0; 
+}
+
+.slick-current .desc p {
+  top: 0;
+  opacity: 1;
+}
+
+.btn {
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: 2px solid black;
+  text-decoration: none;
+  color: black;
+  font-size: .6em;
+  text-transform: uppercase;
+  display: block;
+  margin: 10px auto;
+  max-width: 100px;
+  width: 100%;
+  font-weight: bold;
+  pointer-events: initial;
+}
+
+.btnb {
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin: 25px -40px;
+  border: 2px solid black;
+  text-decoration: none;
+  color: black;
+  font-size: .6em;
+  text-transform: uppercase;
+  max-width: 100px;
+  width: 100%;
+  font-weight: bold;
+  pointer-events: initial;
+  position: absolute;
+  bottom: 0px;
+}
+
+.btn:hover {
+  color: whitesmoke;
+  background-color: black;
+}
+
+.btnb:hover {
+  color: whitesmoke;
+  background-color: black;
+}
+
+header{
+  width: 100%;
+  height: 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+  border-bottom: 2px solid #ddd;
+}
+
+header a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+/* BOOK READ AND BACK TO ROOT SECTION SLICK SLIDER ENDS HERE */
+
+/*FOOTER SECTION STARTS HERE*/
+
+footer{
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  background: #111;
+  margin: 0%;
+}
+
+.main-content{
+  display: flex;
+}
+
+.main-content .box{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+
+.box h2{
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+
+.box .content{
+  margin: 20px 0 0 0;
+  position: relative;
+}
+
+.box .content:before{
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+
+.box .content:after{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 15%;
+  background: #20e3f1;
+  top: -10px;
+}
+
+.left .content p{
+  text-align: justify;
+  color: whitesmoke;
+}
+
+.left .content .social{
+  margin: 20px 0 0 0;
+}
+
+.left .content .social a{
+  padding: 0 2px;
+}
+
+.left .content .social a span{
+  height: 40px;
+  width: 40px;
+  background: whitesmoke;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.left .content .social a span:hover{
+  background: whitesmoke;
+}
+
+.center .content .fas{
+  font-size: 1.4375rem;
+  background: whitesmoke;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.center .content .fas:hover{
+  background: whitesmoke;
+}
+
+.center .content .text{
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+  text-align: center;
+  position: relative;
+  color: whitesmoke;
+}
+
+.center .content .phone{
+  margin: 15px 0;
+}
+
+.right form .text{
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: whitesmoke;
+}
+
+.right form .msg{
+  margin-top: 10px;
+}
+
+.right form input, .right form textarea{
+  width: 100%;
+  font-size: 1.0625rem;
+  background: #151515;
+  color: whitesmoke;
+  padding-left: 10px;
+  border: 1px solid #222222;
+}
+
+.right form input:focus,
+.right form textarea:focus{
+  outline-color: whitesmoke;
+}
+
+.right form input{
+  height: 35px;
+}
+
+.right form .btncu{
+  margin-top: 10px;
+}
+
+.right form .btncu button{
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: whitesmoke;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.right form .btn button:hover{
+  background: #000;
+  color: whitesmoke;
+}
+
+.bottom center{
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+
+.bottom center span{
+  color: #656565;
+}
+
+.bottom center a{
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.bottom center a:hover{
+  text-decoration: underline;
+}
+
+/*FOOTER SECTION STARTS HERE*/
+
+/* RESPONSIVE CODE STARTS HERE*/
+
+@media all and (max-width: 968px) {
+
+/* RESPONSIVE CODE FOR FLEXBOX (BLOGPOST TYPE) STARTS HERE */
+
+.box-area{
+    display: block;
+  }
+  
+.single-box:nth-child(2),.single-box:nth-child(1){
+    width: auto;
+  }
+ 
+.header a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+
+ /* RESPONSIVE CODE FOR FLEXBOX (BLOGPOST TYPE) ENDS HERE */
+ 
+ /* RESPONSIVE CODE  FOR NAV BAR STARTS HERE*/
+
+nav{
+    height: auto;
+    background-color: black;
+    color: whitesmoke;
+  }
+
+.logo img{
+    display: none;
+  }
+
+nav ul{
+    margin-right: 0px;
+    float: left;
+    width: 100%;
+    color: whitesmoke;
+  }
+
+nav ul a{
+    color: whitesmoke;
+  }
+
+[id^=drop]:checked + ul{
+    display: block;
+  }
+  
+.toggle:hover{
+    background-color: black;
+  }
+
+.toggle +a, .nav{
+    display: none;
+  }
+
+.toggle{
+    display: block;
+    background-color: black;
+    padding: 14px 20px;
+    color: whitesmoke;
+    font-size: 14px;
+    text-decoration: none;
+    border: none;
+  }
+
+nav ul li, nav ul ul li{
+    display: block;
+    width: 100%;
+    background-color : black;
+    color: whitesmoke;
+  }
+
+nav ul ul{
+    top: 70px;
+    position: static;
+    border-top: none;
+    float: none;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+nav ul ul ul li{
+    position: static;
+  }
+
+nav ul ul li{
+    border-bottom: 0px;
+  }
+
+nav ul ul a{
+    padding-left: 40px;
+    color: whitesmoke;
+  }
+
+nav ul ul ul a{
+    padding-left: 80px;
+  }
+
+.show{
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+
+.show:hover{
+    color: cyan;
+  }
+
+.icon{
+    display: block;
+    color: white;
+    position: absolute;
+    right: 40px;
+    line-height: 70px;
+    font-size: 25px;
+    cursor: pointer
+  }
+
+nav ul li a{
+  color: whitesmoke;
+  }
+
+nav ul li a:hover{
+    box-shadow: cyan;
+  }
+
+.show + a, ul{
+    display: none;
+  }
+
+[id^=btn]:checked + ul{
+    display: block;
+  }
+
+/* RESPONSIVE CODE  FOR NAV BAR ENDS HERE*/
+
+.prev, .next,.text {font-size: 11px}
+.dot{
+    height: 10px;
+    width: 10px;
+  }
+
+/*  RESPONSIVE BOOK READ AND BACK TO ROOT SECTION SLICK SLIDER STARTS HERE */
+header h1{
+  font-size: 25px;
+}
+
+header p span{
+  font-size: 30px;
+}
+
+section .product {
+  min-width: 49%;
+  margin:  0 10px  0 0;
+}
+
+.detail, .button{
+  font-size: 16px;
+}
+
+.button a{
+  padding: 6px 10px;
+}
+
+.slick-slide .box1 {
+  opacity: 1;
+  box-sizing: border-box;
+  border: 1px solid cyan;
+  height: 380px;
+}
+
+.slick-slide .box1 p {
+  position: relative;
+  opacity: 1;
+  font-weight: bold;
+  height: 100px;
+  margin-top: 0px;
+  width: 100%;
+  font-size: 15px;
+  text-align: left;
+  margin-left: 0px;
+  box-sizing: border-box;
+  border: 2px solid cyan;
+  background-color: black;
+  color: whitesmoke;
+}
+/* RESPONSIVE BOOK READ AND BACK TO ROOT SECTION SLICK SLIDER ENDS HERE */
+
+/* RESPONSIVE CODE  FOR FOOTER STARTS HERE*/
+footer{
+    position: relative;
+    bottom: 0px;
+}
+      
+.main-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+      
+.main-content .box{
+    margin: 5px 0;
+}
+
+/* RESPONSIVE CODE  FOR FOOTER STARTS HERE*/      
+
+}
+
+/* RESPONSIVE CODE ENDS HERE*/

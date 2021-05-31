@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="HMstyle.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+    <title>MayurLeather</title>
+</head>
+<body>
+    <!-- TOPUP BUTTON STARTS HERE-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <span class="fas fa-arrow-circle-up"></span>
+        <script src="HMjavascript.js"></script>
+    </button>
+    <!-- TOPUP BUTTON ENDS HERE-->
+
+    <!-- NAVBAR STARTS HERE-->
+    <nav>
+        <div class="logo"><a href="/Ehome.html"><img src="logo.jpeg"></a></div>
+        <label for="drop" class="toggle">MENU<i class="fa fa-bars" aria-hidden="true"></i></label>
+        <input type="checkbox" id="drop">
+        <ul>
+            <li><a href="/Ehome.html"><span class="fas fa-home"></span></a></li>
+            <li>
+                <label for="btn-1" class="show">Courses
+                    <span class="fas fa-caret-right"></span> 
+                </label>
+                <a href="#">Courses
+                    <span class="fas fa-caret-down"></span>
+                </a>
+                <input type="checkbox" id="btn-1">
+                <ul>
+                    <li><a href="#">Class 1-3</a></li>
+                    <li><a href="#">Class 4-8</a></li>
+                    <li><a href="#">Class 9-12</a></li>
+                    <li>
+                        <label for="btn-3" class="show">Read Book's
+                            <span class="fas fa-caret-right"></span>
+                        </label>
+                        <a href="#">Read Book's
+                            <span class="fas fa-caret-right"></span>
+                        </a>
+                        <input type="checkbox" id="btn-3">
+                        <ul>
+                            <li><a href="#">Bhagwad&nbsp;Geeta</a></li>
+                            <li><a href="#">Ramayan</a></li>
+                            <li><a href="#">Mahabharat</a></li>
+                            <li>
+                                <a href="#">More
+                                <span class="fa fa-plus"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <label for="btn-2" class="show">Quiz 
+                    <span class="fas fa-caret-right"></span>
+                </label>
+                <a href="#">Quiz
+                    <span class="fas fa-caret-down"></span>
+                </a>
+                <input type="checkbox" id="btn-2">
+                <ul>
+                    <li><a href="#">Level 1</a></li>
+                    <li><a href="#">Level 2</a></li>
+                    <li><a href="#">Level 3</a></li>
+                    <li>
+                        <a href="#">More
+                        <span class="fa fa-plus"></span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <label for="btn-4" class="show">Account
+                    <span class="fas fa-caret-right"></span> 
+                </label>
+                <a href="#">Account
+                    <span class="fas fa-caret-down"></span>
+                </a>
+                <input type="checkbox" id="btn-4">
+                <ul>
+                    <li>
+                        <a href="#">Dashboard
+                        <span class='fas fa-poll-h'></span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Wallet
+                        <span class="fas fa-wallet"></span>
+                        </a>
+                    </li>
+                    <li>
+                      <a href="/Elogin.html">Sign&nbsp;Out
+                      <span class="fas fa-sign-out-alt"></span>
+                      </a>
+                  </li>
+                </ul>
+            </li>
+            <li><a href="/Hhome.html">हिन्दी</a></li>
+        </ul>
+    </nav>  
+    <!-- NAVBAR ENDS HERE -->
+
+    <!-- FLEX BOX 70-30-->
+    <div class="box-area">
+        <div class="single-box">
+                <div class="slideshow-container">
+
+                  <div class="mySlides fade">
+                    <div class="numbertext">1 / 8</div>
+                    <img src="img1.jpg" style="width:100%">
+                  </div>
+                  
+                  <div class="mySlides fade">
+                    <div class="numbertext">2 / 8</div>
+                    <img src="img2.jpeg" style="width:100%">
+                  </div>
+                  
+                  <div class="mySlides fade">
+                    <div class="numbertext">3 / 8</div>
+                    <img src="img3.jpeg" style="width:100%">
+                  </div>
+
+                  <div class="mySlides fade">
+                    <div class="numbertext">4 / 8</div>
+                    <img src="img4.jpeg" style="width:100%">
+                  </div>
+
+                  <div class="mySlides fade">
+                    <div class="numbertext">5 / 8</div>
+                    <img src="img5.jpeg" style="width:100%">
+                  </div>
+
+                  <div class="mySlides fade">
+                    <div class="numbertext">6 / 8</div>
+                    <img src="img6.jpeg" style="width:100%">
+                  </div>
+
+                  <div class="mySlides fade">
+                    <div class="numbertext">7 / 8</div>
+                    <img src="img7.jpeg" style="width:100%">
+                  </div>
+
+                  <div class="mySlides fade">
+                    <div class="numbertext">8 / 8</div>
+                    <img src="img8.jpeg" style="width:100%">
+                  </div>
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+              </div>
+              <script src="HMjavascript.js"></script>
+        </div>
+        <div class="single-box">
+                <span class="header-text"><strong>NOTIFICATION</strong></span>
+                <div class="news">
+                <ul>
+                  <li><a href="#"><p> Bhagwad Geeta Available Read Now</p></a></li>
+                  <li><a href="#"><p> Test your knowledge - New Quiz Out</p></a></li>
+                  <li><a href="#"><p> Bhagwad Geeta Available Read Now</p></a></li>
+                  <li><a href="#"><p> Test your knowledge - New Quiz Out</p></a></li>
+                  <li><a href="#"><p> Bhagwad Geeta Available Read Now</p></a></li>
+                  <li><a href="#"><p> Test your knowledge - New Quiz Out</p></a></li>
+                  <li><a href="#"><p> Bhagwad Geeta Available Read Now</p></a></li>
+                  <li><a href="#"><p> Test your knowledge - New Quiz Out</p></a></li>
+                  <li><a href="#"><p> Bhagwad Geeta Available Read Now</p></a></li>
+                  <li><a href="#"><p> Test your knowledge - New Quiz Out</p></a></li>
+                  <li><a href="#"><p> Bhagwad Geeta Available Read Now</p></a></li>
+                  <li><a href="#"><p> Test your knowledge - New Quiz Out</p></a></li>
+                  <li><a href="#"><p> Bhagwad Geeta Available Read Now</p></a></li>
+                  <li><a href="#"><p> Test your knowledge - New Quiz Out</p></a></li>
+                  <li><a href="#"><p> Bhagwad Geeta Available Read Now</p></a></li>
+                  <li><a href="#"><p> Test your knowledge - New Quiz Out</p></a></li>
+                  <li><a href="#"><p> Bhagwad Geeta Available Read Now</p></a></li>
+                  <li><a href="#"><p> Test your knowledge - New Quiz Out</p></a></li>
+                  <li><a href="#"><p> Bhagwad Geeta Available Read Now</p></a></li>
+                  <li><a href="#"><p> Test your knowledge - New Quiz Out</p></a></li>
+                  <li><a href="#"><p> Bhagwad Geeta Available Read Now</p></a></li>
+                  <li><a href="#"><p> Test your knowledge - New Quiz Out</p></a></li>
+                  <li><a href="#"><p> Bhagwad Geeta Available Read Now</p></a></li>
+                  <li><a href="#"><p> Test your knowledge - New Quiz Out</p></a></li>
+                  <li><a href="#"><p> Bhagwad Geeta Available Read Now</p></a></li>
+                  <li><a href="#"><p> Test your knowledge - New Quiz Out</p></a></li>
+                  <li><a href="#"><p> Bhagwad Geeta Available Read Now</p></a></li>
+                  <li><a href="#"><p> Test your knowledge - New Quiz Out</p></a></li>                        
+                </ul>
+                </div>
+        </div>
+    </div>
+    <!-- TOP THREE BOX IN ROW ENDS HERE-->
+
+    <!-- SLICK SLIDER SECTION STARTS HERE -->
+          <!-- BOOKS SECTION -->
+	    <header>
+        <h1>Books</h1>
+      </header>
+      <section class="slider">
+        <div>
+          <img src="book1.jpeg">
+          <div class="desc">
+            <h3>Bhagwad Geeta</h3>
+            <a href="#" class="btn">Read&nbsp;Now</a>
+          </div>
+        </div>
+      
+        <div>
+          <img src="book2.jpeg">
+          <div class="desc">
+            <h3>Mahabharat</h3>
+            <a href="#" class="btn">Read&nbsp;Now</a>
+          </div>
+        </div>
+      
+        <div>
+          <img src="book3.jpeg">
+          <div class="desc">
+            <h3>Ramayan</h3>
+            <a href="#" class="btn">Read&nbsp;Now</a>
+          </div>
+        </div>
+      
+        <div>
+          <img src="book4.jpeg">
+          <div class="desc">
+            <h3>Rig&nbsp;Veda</h3>
+            <a href="#" class="btn">Read&nbsp;Now</a>
+          </div>
+        </div>
+      
+        <div>
+          <img src="book5.jpeg">
+          <div class="desc">
+            <h3>Sama&nbsp;Veda</h3>
+            <a href="#" class="btn">Read&nbsp;Now</a>
+          </div>
+        </div>
+
+        <div>
+          <img src="book6.jpeg">
+          <div class="desc">
+            <h3>Yajur&nbsp;Veda</h3>
+            <a href="#" class="btn">Read&nbsp;Now</a>
+          </div>
+        </div>
+
+        <div>
+          <img src="book7.jpeg">
+          <div class="desc">
+            <h3>Atharva&nbsp;Veda</h3>
+            <a href="#" class="btn">Read&nbsp;Now</a>
+          </div>
+        </div>
+
+        <div>
+          <img src="book8.jpeg">
+          <div class="desc">
+            <h3>Gitanjali</h3>
+            <a href="#" class="btn">Read&nbsp;Now</a>
+          </div>
+        </div> 
+    </section>  
+      <br>
+          <!-- BACK TO ROOTS -->
+      <header>
+        <h1>BACK TO ROOTS</h1>
+      </header>  
+      <section class="responsive">
+        <div>
+          <div class="box1">
+            <p>Rise of Sanatan Culture and its Antiquity</p>
+                <li>Proved Evidence and comparison with other religion exists.</li>
+                <li>Evidence available in world literatures</li>
+            <a href="#" class="btnb">Read&nbsp;Now</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="box1">
+            <p>Geographical Expansion of Sanatan Culture</p>
+              <li>Proved Evidence</li>
+              <li>Ancient temples at other nearby countries (Angarkot, Kailash parvat, Nepal etc.)</li>
+            <a href="#" class="btnb">Read&nbsp;Now</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="box1">
+            <p>Major texts, Vedas, Puranas, Upanishads, major saints and their creations</p>
+              <li>Basics about each Story of Rama, Krishna, Mahabharat, Geeta etc., Charak, Chanakya, aryabhatt etc.</li>
+              <li>Crucks – “sarve bhavantu sukhin” & vasudhaiv kutumbkam, Base behind title of “Vishwa guru”</li>
+            <a href="#" class="btnb">Read&nbsp;Now</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="box1">
+            <p>Scientific of Sanatan Culture</p> 
+              <li>Blind faith V/s Science (Scientific evidence of each ritual and process)</li>
+              <li>Hawan, Pipal pujan, Saparation of jeans etc., Respect to rivers, cow etc.</li>
+            <a href="#" class="btnb">Read&nbsp;Now</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="box1">
+            <p>Major Indian Dynasties and Chakravarti Kings</p>
+              <li>Barat, Raghuvansh Regime Gupta, Mourya, Shung, Kanva etc.</li>
+              <li>Bharat, Ram, Yidhisthir, poras, Vikramadiya, Samudragupt, Ashok, Chandragupta</li>
+            <a href="#" class="btnb">Read&nbsp;Now</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="box1">
+            <p>External attack on india </p>
+              <li>Sikandar, Mangols, taimur lang</a></li>
+            <a href="#" class="btnb">Read&nbsp;Now</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="box1">
+            <p>Muslim external invasion and cultural conflict on India </p>
+              <li>Mugals attack, Mass temples demolition, Prithviraj Chouhan, Hammeer, Shivaji,
+                Maharana kumbha, sanga, pratap, Peshwa Bajiro, Peshwa sadashivrao,
+                Guru govind singh, Banda vairagi and many more</li>
+              <li>Stories of their struggle against Mughal regime</li>
+            <a href="#" class="btnb">Read&nbsp;Now</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="box1">
+            <p>The saints of the Reformation movement,who rekindle the consciousness of the lost religion & their creations & work.</p>
+              <li>Aadi shankaracharya, Tulsidas, Kabeer, Raidas, peepa, Raja Rammohan rai, Swami Dayanand Sarswati, Swami Vivekanand</li>
+              <li>Some of Biographies or short introduction</li>
+            <a href="#" class="btnb">Read&nbsp;Now</a>
+          </div>
+        </div>
+      
+    </section>  
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script> 
+    <script>
+      function createSlick(){  
+    
+      $(".slider").not('.slick-initialized').slick({
+        centerMode: true,
+        autoplay:false,
+        dots:true,
+        arrows:true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        responsive: [
+          {
+            breakpoint: 968,
+            settings: {
+                arrows: true,
+                centerMode: true,
+                dots:true,
+                infinite:true,
+                centerPadding: '40px',
+                slidesToShow: 3,
+                slidesToScroll:1,
+            }
+          },
+          {
+            breakpoint: 750,
+            settings: {
+              arrows: true,
+              dots:true,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ],
+      });
+
+      $('.responsive').not('.slick-initialized').slick({
+        dots: true,
+        infinite: false,
+        arrows:true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1000,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+              dots: true,
+              arrows:true,
+            }
+          },
+          {
+            breakpoint: 660,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite:false,
+              dots:true,
+              arrows:true,
+            }
+          }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+}
+    createSlick();
+    
+    //Will not throw error, even if called multiple times.
+    $(window).on( 'resize', createSlick );
+    
+    </script>
+    <!-- SLICK SLIDER SECTION ENDS HERE-->
+
+    <!-- FOOTER STARTS HERE -->
+        <footer>
+          <div class="main-content">
+            <div class="left box">
+              <h2>About us</h2>
+              <div class="content">
+                <p>Lets make Indian learn about their culutral history</p>
+                <div class="social">
+                  <a href="#"><span class="fab fa-facebook-f"></span></a>
+                  <a href="#"><span class="fab fa-twitter"></span></a>
+                  <a href="#"><span class="fab fa-instagram"></span></a>
+                  <a href="#"><span class="fab fa-youtube"></span></a>
+                </div>
+              </div>
+            </div>
+     
+            <div class="center box">
+              <h2>Address</h2>
+              <div class="content">
+                <div class="place">
+                  <span class="fas fa-map-marker-alt"></span>
+                  <span class="text">Jaipur,Rajasthan</span>
+                </div>
+                <div class="phone">
+                  <span class="fas fa-phone-alt"></span>
+                  <span class="text">+91-0000000000</span>
+                </div>
+                <div class="email">
+                  <span class="fas fa-envelope"></span>
+                  <span class="text">abc@example.com</span>
+                </div>
+              </div>
+            </div>
+     
+            <div class="right box">
+              <h2>Contact us</h2>
+              <div class="content">
+                <form action="#">
+                  <div class="email">
+                    <div class="text">Email *</div>
+                    <input type="email" required placeholder="Email">
+                  </div>
+                  <div class="msg">
+                    <div class="text">Message *</div>
+                    <textarea rows="2" cols="25" required></textarea>
+                  </div>
+                  <div class="btncu">
+                    <button type="submit">Send</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="bottom">
+            <center>
+              <span class="credit">Created By <a href="https://www.linkedin.com/in/tanmay-jain-a6288a15a/">Tanmay Jain</a> | </span>
+              <span class="far fa-copyright"></span><span> 2021 All rights reserved.</span>
+            </center>
+          </div>
+        </footer>
+   <!-- FOOTER ENDS HERE -->
+    
+</body>
+</html>
