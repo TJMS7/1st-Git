@@ -454,8 +454,9 @@ h1{
 .slick-slide .box1 {
   opacity: 1;
   box-sizing: border-box;
-  border: 1px solid cyan;
-  height: 300px;
+  border-radius: 30px;
+  border: 2px solid black;
+  height: 500px;
 }
 
 .slick-slide .box1>* {
@@ -470,15 +471,15 @@ h1{
   position: relative;
   opacity: 1;
   font-weight: bold;
-  height: 100px;
-  margin-top: 0px;
+  height: 130px;
   width: 100%;
   font-size: 15px;
   text-align: center;
   box-sizing: border-box;
-  border: 2px solid cyan;
-  background-color: black;
-  color: whitesmoke;
+  border-radius: 30px;
+  border-bottom: 2px black;
+  background-color: #bababa;
+  color: black;
 }
 
 .slick-slide .box1 li{
@@ -486,7 +487,6 @@ h1{
   font-size: 15px;
   margin-left: 0;
   text-align: left;
-  margin-left: 5px;
 }
 
 .responsive .slick-active{
@@ -567,7 +567,7 @@ h1{
 .btnb {
   border-radius: 30px;
   padding: 10px 20px;
-  margin: 25px -40px;
+  margin: 30px -40px;
   border: 2px solid black;
   text-decoration: none;
   color: black;
