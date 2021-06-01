@@ -492,6 +492,10 @@ h1{
 .responsive .slick-active{
   transform: scale(1);
 }
+.slider .slick-current {
+    opacity: 1;
+    transform: scale(1.1);
+}
 
 .slick-slide img {
   width: 100%;
@@ -976,6 +980,11 @@ section .product {
   border: 2px solid cyan;
   background-color: black;
   color: whitesmoke;
+}
+
+.slider .slick-current {
+  opacity: 1;
+  transform: scale(1);
 }
 /* RESPONSIVE BOOK READ AND BACK TO ROOT SECTION SLICK SLIDER ENDS HERE */
 
