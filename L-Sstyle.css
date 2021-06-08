@@ -280,15 +280,14 @@ form .btn .btn-layer{
 form .btn:hover .btn-layer{
   left: 0;
 }
-form .myBtn{
-  line-height: 250%;
+ form .btn button[type="submit"]{
+  height: 100%;
   width: 100%;
   z-index: 1;
   position: relative;
-  background: -webkit-linear-gradient(right, #039980, #42faf1, #0faedf, #0acff1);
+  background: none;
   border: none;
   color: #fff;
-  margin-top: 15px;
   padding-left: 0;
   border-radius: 5px;
   font-size: 20px;

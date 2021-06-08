@@ -37,7 +37,7 @@
       <div class="form-inner">
         <form action="/#" id="loginForm" method="POST" autocomplete="off" class="login">
           <div class="field">
-            <input class="email" type="email" placeholder="Email or Mobile No." required>
+            <input class= "email" type="email" placeholder="Email or Mobile No." required>
           </div>
           <div class="field">
             <input class="pass" type="password" placeholder="Password" required>
@@ -45,12 +45,11 @@
           <div class="pass-link">
             <a href="#">Forgot Password?</a>
           </div>
-          <!-- <div class="field btn">
+          <div class="field btn">
             <div class="btn-layer"></div>
-            <input type="submit" value="LogIn">
-            <button type="submit" >Login</button>
-          </div> -->
-          <div><button class="myBtn" >Login</button></div>
+            <button type="submit" value="LogIn">Login</button>
+            </a>
+          </div>
           <div class="signup-link">
             Not a member? <a href="">SignUp Now</a>
           </div>
@@ -132,13 +131,10 @@
               <input type="password" placeholder="Confirm your password" required>
             </div>
           </div>
-          <div><button class="myBtn" >Submit</button></div>
-          <!-- <div class="field btn">
+          <div class="field btn">
             <div class="btn-layer"></div>
-            <input type="submit" value="Submit">
-            <button>Submit</button>
-          </div> -->
-
+            <button type="submit" value="Submit">Submit</button>
+          </div>
         </form>
       </div>
     </div>
@@ -147,12 +143,12 @@
 
   <script defer>
 
-document
-   .querySelector('#regForm button')
-  .addEventListener('click', doReg);
- document
-.querySelector('#loginForm button')
-   .addEventListener('click', doLogin);
+    document
+      .querySelector('#regForm button')
+      .addEventListener('click', doReg);
+    document
+      .querySelector('#loginForm button')
+      .addEventListener('click', doLogin);
 
     function doReg(ev) {
       ev.preventDefault();
@@ -188,20 +184,29 @@ document
         body: JSON.stringify(user),
       });
 
-      fetch(req).then((response) => {
-        if (response.statusCode === 200) {
-          return response.json();
-        } else {
-          throw new Error('Something went wrong');
+      fetch(req).then(function (response) {
+        if (response.status === 404) {
+          // response.json().then(function (object) {
+          console.log('error')
+        }
+        else if (response.status === 200) {
+          response.json().then(function (object) {
+            console.log('success')
+          })
         }
       })
-        .then((responseJson) => {
-          callback(responseJson)
-        })
-        .catch((error) => {
-          console.log(error)
-          alert("Username or Password is Incorrect");
-        });
+
+      //   fetch(req).then((response) => {
+      //     if (response.status === 404 || response.status === 200) {
+      // return response.json()
+      //   })
+      //     .then((responseJson) => {
+      //       callback(responseJson)
+      //     })
+      //     .catch((error) => {
+      //       console.log(error)
+      //       alert("Username or Password is Incorrect");
+      //     });
 
 
       // < !--fetch(req) -->
