@@ -57,10 +57,10 @@ function doReg(ev) {
 function doLogin(ev) {
     ev.preventDefault();
     console.log('Send a login request');
-    let em = document.querySelector('#loginForm .email').value;
+    let un = document.querySelector('#loginForm .username').value;
     let pass = document.querySelector('#loginForm .pass').value;
     //TODO: Add form validation
-    let user = { username: em, password: pass };
+    let user = { username: un, password: pass };
     let endpoint = 'login/';
     sendData(user, endpoint, loginSuccess);
 }
