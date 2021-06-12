@@ -93,7 +93,7 @@ function sendData(user, endpoint, callback) {
         } else if (response.status === 404) {
             alert("Error = " + response.status + " User not Found!")
             throw new Error('Something went wrong');
-        } else if (response.status === 405) {
+        } else if (response.status === 406) {
             alert("Error = " + response.status + " Method not allowed by server!")
             throw new Error('Something went wrong');
         } else if (response.status === 409) {
