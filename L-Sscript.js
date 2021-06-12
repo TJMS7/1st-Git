@@ -95,7 +95,7 @@ function sendData(user, endpoint, callback) {
             throw new Error('Something went wrong');
         } else if (response.status === 405) {
             alert("Error = " + response.status + " Method not allowed by server!")
-            throw new Error('Something went wrong');
+            // throw new Error('Something went wrong');
         } else if (response.status === 409) {
             alert("Error = " + response.status + " User doesn't exists in Database")
             throw new Error('Something went wrong');
