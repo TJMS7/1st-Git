@@ -35,93 +35,78 @@
         <div class="slider-tab"></div>
       </div>
       <div class="form-inner">
-        <form action="Hhome.html" class="login">
+        <form action="/#" id="loginForm" method="POST" autocomplete="off" class="login">
           <div class="field">
-            <input type="email or tel" placeholder="ईमेल या मोबाइल नंबर" required>
+            <input class="email" type="email" placeholder="ईमेल या मोबाइल नंबर" required>
           </div>
           <div class="field">
-            <input type="password" placeholder="पासवर्ड" required>
+            <input class="pass" type="password" placeholder="पासवर्ड" required>
           </div>
           <div class="pass-link">
             <a href="#">पासवर्ड भूल गए?</a>
           </div>
           <div class="field btn">
             <div class="btn-layer"></div>
-            <input type="submit" value="लॉग इन करें">
-            </a>
+            <!-- <input type="submit" value="लॉग इन करें"> -->
+            <button type="submit">लॉग इन करें</button>
           </div>
           <div class="signup-link">
             सदस्य नहीं है? <a href="">नया अकॉउंट बनाएँ</a>
           </div>
         </form>
-        <!-- <form action="#" class="signup">
-                  <div class="field">
-                     <input type="email" placeholder="ईमेल" required>
-                  </div>
-                  <div class="field">
-                     <input type="password" placeholder="पासवर्ड" required>
-                  </div>
-                  <div class="field">
-                     <input type="password" placeholder="पासवर्ड की पुष्टि कीजिये" required>
-                  </div>
-                  <div class="field btn">
-                     <div class="btn-layer"></div>
-                     <input type="submit" value="साइन अप करें">
-                  </div>
-               </form> -->
-        <form action="#">
+        <form action="/#" id="regForm" method="POST" autocomplete="off" class="signup">
           <div class="user-details">
             <div class="input-box">
               <span class="details">पहला नाम</span>
-              <input type="text" placeholder="अपना पहला नाम दर्ज करें" required>
+              <input class="fn" type="text" placeholder="अपना पहला नाम दर्ज करें" required>
             </div>
             <div class="input-box">
               <span class="details">पिछ्ला नाम</span>
-              <input type="text" placeholder="अपना पिछ्ला नाम दर्ज करें" required>
+              <input class="ln" type="text" placeholder="अपना पिछ्ला नाम दर्ज करें">
             </div>
             <div class="input-box">
               <span class="details">ईमेल</span>
-              <input type="email" placeholder="अपना ईमेल दर्ज करें" required>
+              <input class="email" type="email" placeholder="अपना ईमेल दर्ज करें" required>
             </div>
             <div class="input-box">
               <span class="details">मोबाइल नंबर</span>
-              <input type="tel" maxlength="10" placeholder="अपना मोबाइल नंबर दर्ज करें" required>
-            </div>
-            <div class="input-box">
-              <span class="details">कक्षा</span>
-              <input type="number" min="1" max="12" placeholder="अपनी कक्षा संख्या दर्ज करें" required>
-            </div>
-            <div class="input-box">
-              <span class="details">कक्षा वर्ग</span>
-              <input type="txt" placeholder="अपनी कक्षा वर्ग दर्ज करें" required>
-            </div>
-            <div class="input-box">
-              <span class="details">पंजीक्रम</span>
-              <input type="number" placeholder="अपनी पंजीक्रम दर्ज करें" required>
+              <input class="mn" type="tel" maxlength="10" placeholder="अपना मोबाइल नंबर दर्ज करें" required>
             </div>
             <div class="input-box">
               <span class="details">विद्यालय</span>
-              <input type="txt" placeholder="अपने विद्यालय का नाम दर्ज करें" required>
+              <input class="sn" type="txt" placeholder="अपने विद्यालय का नाम दर्ज करें" required>
+            </div>
+            <div class="input-box">
+              <span class="details">कक्षा</span>
+              <input class="cls" type="number" min="1" max="12" placeholder="अपनी कक्षा संख्या दर्ज करें" required>
+            </div>
+            <div class="input-box">
+              <span class="details">कक्षा वर्ग</span>
+              <input class="cs" type="txt" placeholder="अपनी कक्षा वर्ग दर्ज करें">
+            </div>
+            <div class="input-box">
+              <span class="details">पंजीक्रम</span>
+              <input class="rn" type="number" placeholder="अपनी पंजीक्रम दर्ज करें">
             </div>
             <div class="input-box">
               <span class="details">पासवर्ड</span>
-              <input type="password" placeholder="अपना पासवर्ड दर्ज करें" required>
+              <input class="pass" type="password" placeholder="अपना पासवर्ड दर्ज करें" required>
             </div>
             <div class="input-box">
               <span class="details">पुन्हा-पासवर्ड लिखे</span>
-              <input type="password" placeholder="पासवर्ड की पुष्टि कीजिये" required>
+              <input class="cpass" type="password" placeholder="पासवर्ड की पुष्टि कीजिये" required>
             </div>
           </div>
           <div class="field btn">
             <div class="btn-layer"></div>
-            <input type="submit" value="पंजीकृत करें">
-            <button onclick="sendJSON()"></button>
+            <!-- <input type="submit" value="पंजीकृत करें"> -->
+            <button type="submit">पंजीकृत करें</button>
           </div>
         </form>
       </div>
     </div>
   </div>
-  <script src="L-Sscript.js"></script>
+
   <!-- FOOTER STARTS HERE -->
   <header>
 
@@ -187,6 +172,8 @@
     </div>
   </footer>
   <!-- FOOTER ENDS HERE -->
+
+  <script src="L-Sscript.js"></script>
 </body>
 
 </html>

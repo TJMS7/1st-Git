@@ -21,10 +21,6 @@ nav{
     width: 100%;
     height: 70px;
     margin-top: 5px;
-    /*background-image: url('bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 400px;*/
     box-shadow: 0 0 5px #000000,
                 0 0 5px #000000;
 }
@@ -69,29 +65,6 @@ nav ul li a:hover{
     box-shadow: 0 0 5px cyan,
                 0 0 5px cyan;
 }
-/* .container{
-  max-width: 690px;
-  width: 50%;
-  background-color: rgb(0, 0, 0);
-  padding: 25px 30px;
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-}
-.container .title{
-  font-size: 25px;
-  font-weight: 500;
-  position: relative;
-}
-.container .title::before{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 30px;
-  border-radius: 5px;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
-} */
 .user-details{
   display: flex;
   flex-wrap: wrap;
@@ -280,7 +253,7 @@ form .btn .btn-layer{
 form .btn:hover .btn-layer{
   left: 0;
 }
- form .btn button[type="submit"]{
+form .btn button[type="submit"]{
   height: 100%;
   width: 100%;
   z-index: 1;

@@ -16,10 +16,18 @@ signupLink.onclick = (() => {
     return false;
 });
 
+// Fetch API
 
-// Login Fetch
-
-
+document.getElementById('regForm').addEventListener('keypress', function (event) {
+    if (event.keyCode == 13) {
+        event.preventDefault();
+    }
+});
+document.getElementById('loginForm').addEventListener('keypress', function (event) {
+    if (event.keyCode == 13) {
+        event.preventDefault();
+    }
+});
 document
     .querySelector('#regForm button')
     .addEventListener('click', doReg);
@@ -30,7 +38,14 @@ document
 function doReg(ev) {
     ev.preventDefault();
     console.log('Send a Register request');
-    let em = document.querySelector('#regForm .username').value;
+    let firstName = document.querySelector('#regForm .fn').value;
+    let lastName = document.querySelector('#regForm .ln').value;
+    let em = document.querySelector('#regForm .email').value;
+    let mobileNo = document.querySelector('#regForm .mn').value;
+    let schoolName = document.querySelector('#regForm .sn').value;
+    let clss = document.querySelector('#regForm .cls').value;
+    let section = document.querySelector('#regForm .cs').value;
+    let rollNo = document.querySelector('#regForm .rn').value;
     let pass = document.querySelector('#regForm .pass').value;
     let cpass = document.querySelector('#regForm .cpass').value;
     //TODO: Add form validation
@@ -51,7 +66,7 @@ function doLogin(ev) {
 }
 
 function sendData(user, endpoint, callback) {
-    let url = `http://127.0.0.1:4000/${endpoint}`;
+    let url = `http://127.0.0.1:5502/${endpoint}`;
     let h = new Headers();
     h.append('Content-Type', 'application/json');
 
@@ -61,80 +76,46 @@ function sendData(user, endpoint, callback) {
         body: JSON.stringify(user),
     });
 
-    fetch(req).then(function (response) {
-        if (response.status === 404) {
-            // response.json().then(function (object) {
-            console.log('error')
+    fetch(req).then((response) => {
+        if (response.status === 200) {
+            response.json();
+        } else if (response.status === 201) {
+            alert("Account Created Successfully.  LOGIN NOW!!!!!!");
+        } else if (response.status === 400) {
+            alert("Error = " + response.status + " Bad Request ")
+            throw new Error('Something went wrong');
+        } else if (response.status === 401) {
+            alert("Error = " + response.status + " Unauthorized User Request")
+            throw new Error('Something went wrong');
+        } else if (response.status === 403) {
+            alert("Error = " + response.status + " Forbidden!! Permission not Granted")
+            throw new Error('Something went wrong');
+        } else if (response.status === 404) {
+            alert("Error = " + response.status + " User not Found!")
+            throw new Error('Something went wrong');
+        } else if (response.status === 406) {
+            alert("Error = " + response.status + " Method not allowed by server!")
+            throw new Error('Something went wrong');
+        } else if (response.status === 409) {
+            alert("Error = " + response.status + " User doesn't exists in Database")
+            throw new Error('Something went wrong');
+        } else if (response.status === 500) {
+            alert("Error = " + response.status + " Sorry! Internal Server Error")
+            throw new Error('Something went wrong');
+        } else if (response.status === 503) {
+            alert("Error = " + response.status + " Sorry! Server Error")
+            throw new Error('Something went wrong');
         }
-        else if (response.status === 200) {
-            response.json().then(function (object) {
-                console.log('success')
-            })
+        else {
+            alert("Something went WRONG!!")
+            throw new Error('Something went wrong');
         }
     })
-
-    //   fetch(req).then((response) => {
-    //     if (response.status === 404 || response.status === 200) {
-    // return response.json()
-    //   })
-    //     .then((responseJson) => {
-    //       callback(responseJson)
-    //     })
-    //     .catch((error) => {
-    //       console.log(error)
-    //       alert("Username or Password is Incorrect");
-    //     });
-
-
-    // < !--fetch(req) -->
-    // < !--        .then(response => response.json())-->
-    // < !--        .then(data => {
-    //           -->
-    // < !--console.log('Success:', data)-->
-    // < !--        })-->
-    // < !--        .catch((error) => {
-    //             -->
-    // < !--console.error('Error:', error); -->
-    // < !--        }); -->
-
-    // < !--fetch(req)-->
-    // < !--            .then((res) => {
-    //               -->
-    // < !--              if (res.status === 200 || res.status === 201) {
-    //                 -->
-    // < !--res.json(); -->
-    // < !--console.log('1st')-->
-    // < !--                } -->
-    // < !--                 else {
-    //                 return console.log("Error"); -->
-    // < !--                 } -->
-    // < !--                 })-->
-    // < !--            .then((token) => {
-    //                   console.log(token)-- >
-    // < !--callback(token)
-    //                 })-->
-
-    // < !--                 .catch((failure) => {
-    //                   -->
-    // < !--console.log(failure)-->
-    // < !--                  }); -->
-    // < !--fetch(req)-->
-    // < !--          .then((res) => res.json())-->
-    // < !--          .then((data) => {
-    //                     -->
-    // < !--            //we have a response-->
-    // < !--            if ('error' in data) {
-    //                       -->
-    // < !--              //bad attempt-->
-    // < !--failure(data.error); -->
-    // < !--            } -->
-    // < !--            else {
-    //                       -->
-    // < !--              //it worked-->
-    // < !--callback(data); -->
-    // < !--            } -->
-    // < !--          })-->
-    // < !--          .catch(failure); -->
+        .then((responseJson) => {
+            callback(responseJson)
+        })
+        .catch((error) => {
+        });
 }
 
 function loginSuccess(token) {

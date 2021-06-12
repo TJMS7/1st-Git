@@ -37,7 +37,7 @@
       <div class="form-inner">
         <form action="/#" id="loginForm" method="POST" autocomplete="off" class="login">
           <div class="field">
-            <input class="email" type="email" placeholder="Email or Mobile No." required>
+            <input class="email" type="email" placeholder="Email ID" required>
           </div>
           <div class="field">
             <input class="pass" type="password" placeholder="Password" required>
@@ -47,98 +47,67 @@
           </div>
           <div class="field btn">
             <div class="btn-layer"></div>
-            <button type="submit" value="LogIn">Login</button>
-            </a>
+            <!-- <input type="submit" value="LogIn"> -->
+            <button type="submit">Login</button>
           </div>
           <div class="signup-link">
             Not a member? <a href="">SignUp Now</a>
           </div>
         </form>
-        <!-- <form action="#" class="signup">
-                <div class="field">
-                  <input type="text" placeholder="First Name" required>
-                </div>
-                <div class="field">
-                  <input type="text" placeholder="Last Name" required>
-                </div>
-                <div class="field">
-                  <input type="email" placeholder="Email" required>
-                </div>
-                <div class="field">
-                  <input type="date" placeholder="D.O.B" required>
-                </div>
-                <div class="field">
-                  <input type="number" placeholder="Class" required>
-                </div>
-                <div class="field">
-                  <input type="number" placeholder="Mobile No." required>
-                </div>
-                <div class="field">
-                  <input type="text" placeholder="School Name" required>
-                </div>
-                <div class="field">
-                  <input type="password" placeholder="Password" required>
-                </div>
-                <div class="field">
-                  <input type="password" placeholder="Confirm Password" required>
-                </div>
-                <div class="field btn">
-                  <div class="btn-layer"></div>
-                  <input type="submit" value="SignUp">
-                  <button id="myBtn" onclick="sendJSON()"></button>
-                </div>
-              </form> -->
         <form action="/#" id="regForm" method="POST" autocomplete="off" class="signup">
           <div class="user-details">
             <div class="input-box">
               <span class="details">First Name</span>
-              <input type="text" placeholder="Enter your First Name" required>
+              <input class="fn" type="text" placeholder="Enter your First Name" required>
             </div>
             <div class="input-box">
               <span class="details">Last Name</span>
-              <input type="text" placeholder="Enter your Last Name" required>
+              <input class="ln" type="text" placeholder="Enter your Last Name">
             </div>
             <div class="input-box">
               <span class="details">Email</span>
-              <input type="email" placeholder="Enter your email" required>
+              <input class="email" type="email" placeholder="Enter your email" required>
             </div>
             <div class="input-box">
               <span class="details">Mobile No.</span>
-              <input type="tel" maxlength="10" placeholder="Enter your Mobile No." required>
-            </div>
-            <div class="input-box">
-              <span class="details">Class</span>
-              <input type="number" min="1" max="12" placeholder="Enter your Class" required>
-            </div>
-            <div class="input-box">
-              <span class="details">Section</span>
-              <input type="txt" placeholder="Enter your Class Section" required>
-            </div>
-            <div class="input-box">
-              <span class="details">Roll No.</span>
-              <input type="number" placeholder="Enter your Roll No." required>
+              <input class="mn" type="tel" maxlength="10" placeholder="Enter your Mobile No." required>
             </div>
             <div class="input-box">
               <span class="details">School Name</span>
-              <input type="txt" placeholder="Enter your School Name" required>
+              <input class="sn" type="list" placeholder="Enter your School Name" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Class</span>
+              <input class="cls" type="number" min="1" max="12" placeholder="Enter your Class" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Section</span>
+              <input class="cs" type="txt" placeholder="Enter your Class Section">
+            </div>
+            <div class="input-box">
+              <span class="details">Roll No.</span>
+              <input class="rn" type="number" placeholder="Enter your Roll No.">
             </div>
             <div class="input-box">
               <span class="details">Password</span>
-              <input type="password" placeholder="Enter your password" required>
+              <input class="pass" type="password" placeholder="Enter your password" required>
             </div>
             <div class="input-box">
               <span class="details">Confirm Password</span>
-              <input type="password" placeholder="Confirm your password" required>
+              <input class="cpass" type="password" placeholder="Confirm your password" required>
             </div>
           </div>
           <div class="field btn">
             <div class="btn-layer"></div>
-            <button type="submit" value="Submit">Submit</button>
+            <!-- <input type="submit" value="LogIn"> -->
+            <button type="submit">Submit</button>
+            </a>
           </div>
         </form>
       </div>
     </div>
   </div>
+
   <!-- FOOTER STARTS HERE -->
   <header>
 
